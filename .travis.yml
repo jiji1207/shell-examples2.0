@@ -1,0 +1,47 @@
+language: bash
+
+before_install:
+        - sudo apt-get update
+	- sudo apt-get install shellcheck
+        - sudo apt-get install imagemagick
+        - sudo apt install p7zip-full
+        - 7z x -ot web_log.tsv.7z
+        - ls -l
+	- wget "https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/worldcupplayerinfo.tsv"
+        - wget "https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z"
+
+
+scirpt:
+        - echo "Task one"
+        - shellcheck scripts.sh
+        - echo ":==================================="
+        - bash scripts.sh -h
+        - bash scripts.sh -q 88%
+        - bash scripts.sh -r 70%
+        - bash scripts.sh -w JiJi
+        - bash scripts.sh -p "JiJi's pics"
+        - bash scripts.sh -t
+        - echo ":==================================="
+        - echo "Task two"
+        - shellcheck scripts2.sh
+        - echo ":==================================="
+        - bash scripts2.sh -h
+        - bash scripts2.sh -r 
+        - bash scripts2.sh -p
+        - bash scripts2.sh -n 
+        - bash scripts2.sh -a
+        - echo ":===================================:"        
+        - echo "Task three"
+        - shellcheck scripts3.sh
+        - echo ":===================================:"
+        - bash scripts3.sh -h
+        - bash scripts3.sh -t
+        - bash scripts3.sh -i 
+        - bash scripts3.sh -u
+        - bash scripts3.sh -r
+        - bash scripts3.sh -x 
+        - bash scripts3.sh -s /icons/menu.xbm
+
+notifications:
+  email:
+    on_success: never
