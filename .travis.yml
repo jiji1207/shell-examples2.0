@@ -9,7 +9,8 @@ before_install:
         - ls -l
 	- wget "https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/worldcupplayerinfo.tsv"
         - wget "https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z"
-
+        - cd chap0x04/
+        - cd bash/
 
 scirpt:
         - echo "Task one"
