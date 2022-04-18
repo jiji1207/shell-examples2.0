@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-export PATH=/usr/local/bin:$PATH
+#export PATH=/usr/local/bin:$PATH
 
-file_PATH="/Users/jiji/Desktop/H4/test_pics"
-
-cd $file_PATH
+source ../test_pics
       
 function help
 {
