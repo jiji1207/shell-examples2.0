@@ -4,19 +4,20 @@ before_install:
   - "sudo apt-get install shellcheck"
   - "sudo apt-get install imagemagick"
   - "sudo apt install p7zip-full"
-  - "wget \"https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z\""
-  - "7z x -oweb_log.tsv web_log.tsv.7z"
-  - "ls -l"
-  - "wget \"https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/worldcupplayerinfo.tsv\""
-  - "cd chap0x04/"
-  - "cd bash/"
 language: bash
 notifications: 
   email: 
     on_success: never
 scirpt: 
+  - "wget \"https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z\""
+  - "7z x -oweb_log.tsv web_log.tsv.7z"
+  - "wget \"https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/worldcupplayerinfo.tsv\""
+  - "ls -l"
+  - "cd chap0x04/"
+  - "ls -l"
   - "echo \"Task one\""
-  - "shellcheck scripts.sh"
+  - "cd test_pics"
+  - "shellcheck ../bash/scripts.sh"
   - "echo \":===================================\""
   - "bash scripts.sh -h"
   - "bash scripts.sh -q 88%"
@@ -24,6 +25,8 @@ scirpt:
   - "bash scripts.sh -w JiJi"
   - "bash scripts.sh -p \"JiJi's pics\""
   - "bash scripts.sh -t"
+  - "cd"
+  - "cd bash/"
   - "echo \":===================================\""
   - "echo \"Task two\""
   - "shellcheck scripts2.sh"
