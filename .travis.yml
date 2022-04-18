@@ -22,7 +22,7 @@ scirpt:
   - "bash ../bash/scripts.sh -h"
   - "bash ../bash/scripts.sh -q 88%"
   - "bash ../bash/scripts.sh -r 70%"
-  - "bash ../bash/scripts.sh -w "jiji""
+  - "bash ../bash/scripts.sh -w jiji"
   - "bash ../bash/scripts.sh -p \"JiJi's pics\""
   - "bash ../bash/scripts.sh -t"
   - "cd ../bash"
