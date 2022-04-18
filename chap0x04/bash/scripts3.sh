@@ -86,7 +86,7 @@ function source_host
 	printf "输出的次数  来源主机\n"
     awk -F "\t" '
 	{
-		if("'$1'"==$5)
+		if("'"$1"'"==$5)
 		{print $1}
 	}' web_log.tsv| sort |uniq -c | sort -nr | head -n 100
 }
