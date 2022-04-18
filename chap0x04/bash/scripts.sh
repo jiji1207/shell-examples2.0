@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 #export PATH=/usr/local/bin:$PATH
-
-source ../test_pics
       
 function help
 {
@@ -46,7 +44,7 @@ function watermark
 {
     for img in *; 
     do
-        mogrify -pointsize 16 -fill black -weight bolder -gravity southeast -annotate +5+5 "$1" $img
+        mogrify -pointsize 16 -fill black -weight bolder -gravity southeast -annotate +5+5 "$1" "$img"
         echo "$img is successfully watermarked."
     done
 }
@@ -59,7 +57,7 @@ function prefix
 {
     for img in *; 
     do
-        mv $img $1$img
+        mv "$img" "$1""$img"
         echo "$img add perfix"
     done
 
@@ -73,7 +71,7 @@ function suffix
 {
     for img in *;
     do
-        mv $img $img$1
+        mv "$img" "$img""$1"
         echo "$img add suffix"
     done
 
@@ -86,7 +84,7 @@ function transformed_into_jpeg
     for img in *.png *.svg; 
     do
 	file=${img%.*}".jpg"
-        convert $img ${file}
+        convert "$img" "${file}"
         echo "$img is transformed into jpg"
     done
 
