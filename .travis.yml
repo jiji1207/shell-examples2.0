@@ -17,7 +17,7 @@ scirpt:
   - "cd chap0x04/"
   - "ls -l"
   - "echo \"Task one\""
-  - "shellcheck /bash/scripts.sh"
+  - "shellcheck bash/scripts.sh"
   - "echo \":===================================\""
   - "cd test_pics/"
   - "bash ../bash/scripts.sh -h"
