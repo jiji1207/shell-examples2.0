@@ -3,6 +3,7 @@ before_install:
   - "sudo apt-get update"
   - "sudo apt-get install shellcheck"
   - "sudo apt-get install imagemagick"
+  - "sudo apt-get install ghostscript"
   - "sudo apt install p7zip-full"
 language: bash
 notifications: 
