@@ -64,7 +64,11 @@
 ---
 ## 遇到的问题及解决办法
 
+<<<<<<< HEAD
 * 脚本scripts.sh遇到的一些问题
+=======
+* 脚本scripts.sh
+>>>>>>> f8a44f0139c673bf5783cf68c012c32905e09458
   * 遇到问题1：安装`Imagemagick`后执行脚本`scripts.sh`会发现出现报错`bash:ls:command not found`并且Imagemagick中的工具`convert``rm`等也都会出现相同的报错。
 
     解决办法：在搜索引擎上查询问题，发现可能是命令的环境变量出现了问题，查询当前命令的环境变量，发现'convert'等命令并不在PATH环境变量中，需要将它们的路径添加至PATH，参考文章[linux可执行文件添加到PATH环境变量的方法](https://www.cnblogs.com/joshua317/p/6899057.html)
@@ -78,15 +82,20 @@
     file_path=/.../.../.../ # 我的文件的绝对路径
     cd $file_path
     ```
+<<<<<<< HEAD
     然后在本地执行该脚本没有出现任何问题，但是我把scripts.sh部署到travis.ci上面是，一直提示在`shellcheck scripts.sh exited with 1`，再在本地执行`shellcheck scripts.sh`查看详情，发现在报错的提示信息中显示`^-----------^ SC2164 (warning): Use 'cd ... || exit' or 'cd ... || return' in case cd fails.`，我的理解就是cd 不可使用。
 
     解决办法：根据文章[shell脚本中无法使用cd的问题原因及解决方法](https://blog.csdn.net/GX_1_11_real/article/details/80990250)，我把原来的语句换成了
+=======
+    然后在本地执行该脚本没有出现任何问题，但是我把scripts.sh部署到travis.ci上面是，一直提示在`shellcheck scripts.sh exited with 1`，再在本地执行`shellcheck scripts.sh`查看详情，发现在报错的提示信息中显示`^-----------^ SC2164 (warning): Use 'cd ... || exit' or 'cd ... || return' in case cd fails.`，我的理解就是cd 不可使用，根据文章[shell脚本中无法使用cd的问题原因及解决方法](https://blog.csdn.net/GX_1_11_real/article/details/80990250)，我把原来的语句换成了
+>>>>>>> f8a44f0139c673bf5783cf68c012c32905e09458
     ```bash
     source /.../.../...
     ```
     但是依旧不行，在shellcheck中依旧显示语法错误，我仔细一想，把文件部署到travis.ci的话我本地的路径是无法正常使用的，我应该使用相对路径才行，根据我上传到仓库的目录
     ![](report_pics/仓库目录1.png)
     ![](report_pics/仓库目录2.png)
+<<<<<<< HEAD
     因为我在yaml文件中首先`cd chap0x04`然后`cd bash`才可以执行我的脚本，那此时我需要处理的图片的文件夹是相对处于上一级，那我只需要`source ../test_pics`即可，但是结果显示好像依旧不行。
     仔细一想其实可以把这个想法在yaml配置问价里实现，只需要把`cd chap0x04`改成`cd test_pics`然后执行脚本时，把`bash scripts,sh`改成`bash ../bash/scripts.sh`，问题解决。
 
@@ -133,3 +142,6 @@
 
 
 
+=======
+    因为我在yaml文件中首先`cd chap0x04`然后`cd bash`才可以执行我的脚本，那此时我需要处理的图片的文件夹是相对处于上一级，那我只需要`source ../test_pics`即可，但是结果显示好像依旧不行
+>>>>>>> f8a44f0139c673bf5783cf68c012c32905e09458
