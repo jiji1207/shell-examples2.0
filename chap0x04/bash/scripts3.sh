@@ -32,7 +32,7 @@ function ip_top100
 
 function URL_top_100 
 {
-   	printf "被访问的次�URL\n"
+   	printf "被访问的次�URL\n"
     awk -F "\t" '
 	{
 		{print $5}
