@@ -1,39 +1,28 @@
-<<<<<<< HEAD
----
-=======
 --- 
->>>>>>> f8a44f0139c673bf5783cf68c012c32905e09458
 before_install: 
   - "sudo apt-get update"
   - "sudo apt-get install shellcheck"
   - "sudo apt-get install imagemagick"
-<<<<<<< HEAD
   - "sudo apt install p7zip-full"
   - "sudo apt install ghostscript"
   - "ls -l"
-=======
   - "sudo apt-get install ghostscript"
   - "sudo apt install p7zip-full"
->>>>>>> f8a44f0139c673bf5783cf68c012c32905e09458
 language: bash
 notifications: 
   email: 
     on_success: never
 scirpt: 
-<<<<<<< HEAD
   - "wget \"https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/worldcupplayerinfo.tsv\""
   - "wget \"https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z\""
   - "7z x -oweb_log.tsv web_log.tsv.7z"
-=======
   - "wget \"https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z\""
   - "7z x -oweb_log.tsv web_log.tsv.7z"
   - "wget \"https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/worldcupplayerinfo.tsv\""
->>>>>>> f8a44f0139c673bf5783cf68c012c32905e09458
   - "ls -l"
   - "cd chap0x04/"
   - "ls -l"
   - "echo \"Task one\""
-<<<<<<< HEAD
   - "shellcheck bash/scripts.sh"
   - "echo \":===================================\""
   - "cd test_pics/"
@@ -54,7 +43,6 @@ scirpt:
   - "ls -l"
   - "echo \"Task two\""
   - "shellcheck scripts2.sh"
-=======
   - "cd test_pics"
   - "shellcheck ../bash/scripts.sh"
   - "echo \":===================================\""
@@ -69,7 +57,6 @@ scirpt:
   - "echo \":===================================\""
   - "echo \"Task two\""
   - "shellcheck scripts2.sh"
->>>>>>> f8a44f0139c673bf5783cf68c012c32905e09458
   - "echo \":===================================\""
   - "bash scripts2.sh -h"
   - "bash scripts2.sh -r"
@@ -79,10 +66,6 @@ scirpt:
   - "echo \":===================================:\""
   - "echo \"Task three\""
   - "shellcheck scripts3.sh"
-<<<<<<< HEAD
-  - "7z x -oweb_log.tsv web_log.tsv.7z"
-=======
->>>>>>> f8a44f0139c673bf5783cf68c012c32905e09458
   - "echo \":===================================:\""
   - "bash scripts3.sh -h"
   - "bash scripts3.sh -t"
@@ -91,7 +74,3 @@ scirpt:
   - "bash scripts3.sh -r"
   - "bash scripts3.sh -x"
   - "bash scripts3.sh -s /icons/menu.xbm"
-<<<<<<< HEAD
-
-=======
->>>>>>> f8a44f0139c673bf5783cf68c012c32905e09458
